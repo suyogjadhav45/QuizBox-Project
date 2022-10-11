@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tiers</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    
+</head>
+
+
+
+
+<body> -->
+<% layout('/layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card p-3 text-dark px-5">
+                <form action="/quiz" method="post">
+                    <div class="panel">
+                        <div class="row">
+                            <div>
+                                <h1>
+                                    <%= info.question%>
+                                </h1>
+
+                                <div class="centre">
+                                    <div class="plans ">
+                                        <label class="plan basic-plan" for="opt1">
+                                        <input id="opt1" type="radio" value="<%=info.options[0]%>" name="Choosen_opt"
+                                            required="required">
+                                        <div class="plan-content plan-detail">
+                                            <label for="opt1">
+                                                <%=info.options[0]%>
+                                            </label>
+                                    </div>
+                                    </label>
+
+                                    <label class="plan complete-plan" for="opt2">
+                                        <input id="opt2" type="radio" value="<%=info.options[1]%>" name="Choosen_opt"
+                                            required="required">
+                                        <div class="plan-content plan-detail">
+                                            <label for="opt2">
+                                                <%=info.options[1]%>
+                                            </label>
+                                </div>
+                                </label>
+                            </div>
+
+                            <div class="plans">
+                                <label class="plan basic-plan" for="opt3">
+                                        <input id="opt3" type="radio" value="<%=info.options[2]%>" name="Choosen_opt"
+                                            required="required">
+                                        <div class="plan-content plan-detail">
+                                            <label for="opt3">
+                                                <%=info.options[2]%>
+                                            </label>
+                            </div>
+                            </label>
+
+                            <label class="plan complete-plan" for="opt4">
+                                        <input id="opt4" type="radio" value="<%=info.options[3]%>" name="Choosen_opt"
+                                            required="required">
+                                        <div class="plan-content plan-detail">
+                                            <label for="opt4">
+                                                <%=info.options[3]%>
+                                            </label>
+
+                        </div>
+                        </label>
+
+                    </div>
+                    <div class="col"><button class="w-100 m-0 btn btn-outline-dark" type="submit">NEXT</button></div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    </form>
+
+    </div>
+    </div>
+    </div>
+
+    <script src=" quiz.js"></script>
+    <!-- </body>
+
+</html> -->

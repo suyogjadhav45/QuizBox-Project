@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RESULT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</head>
+
+
+<body>
+    <div class="panel container-fluid">
+
+
+        <h1 class="score">
+            SCORE:
+            <%=obj.score %>
+        </h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Choosen_opt</th>
+                    <th scope="col">Correct_ans</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for( let i = 0; i < obj.data.length; i++ ) { %>
+                    <tr class="<%=obj.data[i].correctOpt === obj.data[i].chosenOption ? 'success':'danger'%>">
+                        <th scope="row">
+                            <%=i+1 %>
+                        </th>
+                        <td>
+                            <%=obj.data[i].question %>
+                        </td>
+                        <td>
+                            <%=obj.data[i].chosenOption %>
+                        </td>
+                        <td>
+                            <%=obj.data[i].correctOpt %>
+                        </td>
+                        <td>
+                            <% if (obj.data[i].correctOpt === obj.data[i].chosenOption) { %>
+                                ✅
+
+                                <% } else { %>
+                                    ❌
+                                    <% } %>
+                        </td>
+                    </tr>
+                    <% } %>
+
+
+            </tbody>
+
+        </table>
+        <div class=""><a class="w-100 m btn btn-dark" href="/">Start Again</a></div>
+
+    </div>
+    <br>
+
+</body>
+
+
+</html>

@@ -1,0 +1,61 @@
+<% layout('/layouts/boilerplate') %>
+        <div class="row">
+
+            <div class="col-6 offset-3">
+                <div class="card p-3 text-dark px-5">
+                    <h1 class="card-title text-center mb-4">Quiz App</h1>
+                    <form class="" action="/" method="POST">
+                        <div class="form-group d-flex flex-column align-items-center mb-3">
+                            <label>Select Category</label>
+                            <div class="c-elements">
+                                <div class="form-check">
+                                    <input class="form-check-input" id="check1" type="checkbox" name="category" value="Science" checked="checked">
+                                    <label class="form-check-label" for="check1"> Science</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="category" id="check2" value="history">
+                                    <label class="form-check-label" for="check2"> History</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="category" id="check3" value="sports">
+                                    <label class="form-check-label" for="check3"> Sports</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="d-flex flex-column align-items-center mb-1 ">Choose Number of
+                            Questions</label>
+                            <div class="q-elements">
+                                <select class="form-control text-center" name="quenumber">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex flex-column align-items-center mb-3">
+                            <label class="mb-1">Select Difficulty Level</label>
+                            <div class="form-check">
+                                <input class="form-check-input" id="Easy" type="radio" value="easy" name="level" required="required" checked=true>
+                                <label class="form-check-label" for="Easy">Easy</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="Med" type="radio" value="medium" name="level" required="required">
+                                <label class="form-check-label" for="Med">Medium</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="Hard" type="radio" value="hard" name="level" required="required">
+                                <label class="form-check-label" for="Hard">Hard</label>
+                            </div>
+                        </div>
+                        </section>
+
+                        <button class="w-100 m-0 btn btn-outline-dark" type="submit">START</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
